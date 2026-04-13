@@ -1,0 +1,132 @@
+---
+const platforms = [
+  {
+    name: 'Spotify',
+    href: '#',
+    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>`,
+  },
+  {
+    name: 'Apple Podcasts',
+    href: '#',
+    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M5.34 0A5.328 5.328 0 000 5.34v13.32A5.328 5.328 0 005.34 24h13.32A5.328 5.328 0 0024 18.66V5.34A5.328 5.328 0 0018.66 0H5.34zm6.525 2.568c2.336 0 4.448.902 6.056 2.587 1.224 1.272 1.912 2.619 2.264 4.392.12.6-.12 1.2-.72 1.32s-1.2-.12-1.32-.72c-.264-1.368-.816-2.388-1.716-3.36-1.272-1.332-2.88-2.016-4.596-2.016-3.456 0-6.3 2.784-6.3 6.24 0 1.728.684 3.312 1.884 4.488.36.36.36.96 0 1.32s-.96.36-1.32 0C4.464 15.18 3.588 13.116 3.588 10.8c0-4.584 3.696-8.232 8.277-8.232zM11.7 6.744c1.584 0 3 .624 4.068 1.728.804.84 1.308 1.848 1.524 3.048.072.588-.36 1.14-.948 1.212-.588.072-1.14-.36-1.212-.948-.12-.768-.444-1.404-.948-1.968-.696-.72-1.596-1.092-2.604-1.092-1.944 0-3.54 1.536-3.54 3.456 0 .984.396 1.884 1.08 2.544.36.36.36.96 0 1.32s-.96.36-1.32 0c-1.008-1.008-1.56-2.34-1.56-3.756 0-3.048 2.46-5.544 5.46-5.544zm.12 4.428c.924 0 1.668.744 1.668 1.668 0 .576-.288 1.08-.72 1.392v4.32c0 .528-.42.948-.948.948s-.948-.42-.948-.948v-4.32c-.432-.312-.72-.816-.72-1.392 0-.924.744-1.668 1.668-1.668z"/></svg>`,
+  },
+  {
+    name: 'Amazon Music',
+    href: '#',
+    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.439 19.49c-.257.359-.617.488-.873.233-2.389-2.05-5.682-2.604-9.422-1.424-.354.1-.708-.154-.808-.508-.1-.354.154-.708.508-.808 4.098-1.294 7.62-.72 10.261 1.535.308.205.436.564.334.972zM18.925 16.02c-.308.41-.872.564-1.282.257-2.748-1.733-6.904-2.234-10.133-1.22-.462.154-.923-.103-1.077-.462-.154-.462.103-.923.462-1.077 3.692-1.16 8.284-.564 11.442 1.386.41.205.565.872.205 1.116h.383zM19.131 12.447c-3.282-1.991-8.695-2.183-11.828-1.22-.513.154-1.028-.154-1.182-.667-.154-.513.154-1.028.667-1.182 3.59-1.116 9.566-.872 13.337 1.375.462.257.616.872.36 1.334-.257.462-.872.617-1.354.36z"/></svg>`,
+  },
+  {
+    name: 'YouTube',
+    href: '#',
+    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>`,
+  },
+];
+---
+
+<section class="listen section" id="listen">
+  <div class="container">
+    <div class="listen-header fade-in">
+      <span class="section-label">Listen</span>
+      <h2 class="section-title">Available On Your Favorite Platform</h2>
+      <p class="section-subtitle" style="text-align: center;">
+        Subscribe wherever you listen to podcasts. New episodes dropping soon.
+      </p>
+      <hr class="divider" />
+    </div>
+
+    <div class="platforms-grid fade-in">
+      {platforms.map((platform) => (
+        <a
+          href={platform.href}
+          class="platform-card"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`Listen on ${platform.name}`}
+        >
+          <span class="platform-icon" set:html={platform.icon} />
+          <span class="platform-name">{platform.name}</span>
+          <span class="platform-soon">Coming Soon</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .listen-header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: var(--space-3xl);
+  }
+
+  .platforms-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-lg);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .platform-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-xl) var(--space-lg);
+    background: var(--color-surface);
+    border: 1px solid rgba(201, 168, 76, 0.1);
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-base);
+    text-align: center;
+  }
+
+  .platform-card:hover {
+    border-color: rgba(201, 168, 76, 0.3);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-gold);
+  }
+
+  .platform-icon {
+    color: var(--color-gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(201, 168, 76, 0.1);
+    transition: background var(--transition-base);
+  }
+
+  .platform-card:hover .platform-icon {
+    background: rgba(201, 168, 76, 0.2);
+  }
+
+  .platform-name {
+    font-family: var(--font-heading);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--color-text);
+    letter-spacing: 0.03em;
+  }
+
+  .platform-soon {
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    font-style: italic;
+  }
+
+  @media (max-width: 768px) {
+    .platforms-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 420px) {
+    .platforms-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

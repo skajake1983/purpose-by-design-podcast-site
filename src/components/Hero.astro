@@ -1,0 +1,156 @@
+---
+---
+
+<section class="hero" id="home">
+  <div class="hero-glow"></div>
+  <div class="hero-content container">
+    <div class="hero-logo fade-in">
+      <img src="/logo.png" alt="Purpose by Design" width="280" height="280" />
+    </div>
+    <h1 class="hero-hosts fade-in">
+      with Jacob Adams &amp; Diana Urbina
+    </h1>
+    <p class="hero-tagline fade-in">
+      Uncovering purpose, one story at a time.
+    </p>
+    <p class="hero-description fade-in">
+      Real conversations with real people about finding their purpose, 
+      leveraging their strengths, and the steps they took to get there.
+    </p>
+    <div class="hero-cta fade-in">
+      <a href="#episodes" class="btn btn-primary">Coming Soon</a>
+      <a href="#about" class="btn btn-outline">Meet the Hosts</a>
+    </div>
+  </div>
+  <div class="hero-scroll-indicator">
+    <span></span>
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: var(--nav-height);
+    overflow: hidden;
+  }
+
+  .hero-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(201, 168, 76, 0.12) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-lg);
+  }
+
+  .hero-logo img {
+    width: 220px;
+    height: auto;
+    filter: drop-shadow(0 0 40px rgba(201, 168, 76, 0.3));
+    animation: logoFloat 6s ease-in-out infinite;
+  }
+
+  @keyframes logoFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+
+  .hero-hosts {
+    font-family: var(--font-heading);
+    font-size: var(--text-2xl);
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    line-height: 1.3;
+    color: var(--color-text-secondary);
+  }
+
+  .hero-tagline {
+    font-family: var(--font-heading);
+    font-size: var(--text-xl);
+    font-weight: 600;
+    color: var(--color-gold);
+    letter-spacing: 0.08em;
+  }
+
+  .hero-description {
+    font-size: var(--text-base);
+    color: var(--color-text-secondary);
+    max-width: 560px;
+    line-height: 1.8;
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: var(--space-lg);
+    margin-top: var(--space-md);
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Scroll indicator */
+  .hero-scroll-indicator {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .hero-scroll-indicator span {
+    display: block;
+    width: 24px;
+    height: 40px;
+    border-radius: 12px;
+    border: 2px solid rgba(201, 168, 76, 0.4);
+    position: relative;
+  }
+
+  .hero-scroll-indicator span::after {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 8px;
+    border-radius: 2px;
+    background: var(--color-gold);
+    animation: scrollBounce 2s ease-in-out infinite;
+  }
+
+  @keyframes scrollBounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); opacity: 1; }
+    50% { transform: translateX(-50%) translateY(12px); opacity: 0.3; }
+  }
+
+  @media (max-width: 768px) {
+    .hero-logo img {
+      width: 160px;
+    }
+
+    .hero-glow {
+      width: 350px;
+      height: 350px;
+    }
+
+    .hero-scroll-indicator {
+      bottom: 20px;
+    }
+  }
+</style>
